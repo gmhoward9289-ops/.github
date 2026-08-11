@@ -1,0 +1,62 @@
+name: Bug report
+description: Something does not work, or does not work the way the docs say
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. The three things that make a bug fixable
+        rather than guessable are the version, the platform, and what you
+        actually saw — the rest is optional.
+
+        **Not a bug report:** a security vulnerability. Send those to
+        dev@swamplink.com instead, per SECURITY.md.
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: What `<tool> --version` prints. "installed from git main" is a fine answer.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: platform
+    attributes:
+      label: OS and Python version
+      description: Several of these tools behave differently on Windows; say which you are on.
+      placeholder: "macOS 15.2, Python 3.13.1"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: >
+        What you ran, and what you saw. Paste the traceback or the on-screen
+        output rather than describing it — and scrub anything private first:
+        these tools display repo names, branch names and agent task strings,
+        which may not be yours to share.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+      description: Skip this if it is obvious from the above.
+    validations:
+      required: false
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce it
+      description: >
+        If you know. "Only happens with more than ten sessions open" or "only
+        after a rebase" is genuinely useful even when it is not a recipe.
+    validations:
+      required: false

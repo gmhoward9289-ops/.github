@@ -1,0 +1,52 @@
+name: Feature request
+description: Something the tool should do and does not
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Worth knowing before you write this up: these tools are deliberately
+        small, single-purpose, and dependency-free. The most common reason a
+        good idea gets declined is not that it is a bad idea — it is that it
+        belongs in a different tool, or it would cost the no-dependencies
+        promise. Saying what you are actually trying to do, rather than the
+        feature you have in mind, gives it the best chance.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do?
+      description: >
+        The situation, not the solution. "I run agents across two machines and
+        cannot tell which box a session is on" beats "add a hostname column" —
+        it leaves room for a better answer than the one you had in mind.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you have in mind
+      description: Optional. A sketch of the output or the flag is plenty.
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you tried instead
+      description: >
+        Including "nothing, I just live with it." Knowing the current
+        workaround says a lot about how much the gap actually costs.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: Constraints
+      options:
+        - label: This would not require adding a runtime dependency (or I have said below why it is worth one)
+          required: false
+        - label: This would not make a read-only tool write anything
+          required: false

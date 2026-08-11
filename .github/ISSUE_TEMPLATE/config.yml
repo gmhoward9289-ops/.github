@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/gmhoward9289-ops/.github/blob/main/SECURITY.md
+    about: Do not open a public issue. Report privately to dev@swamplink.com.
+  - name: Question, idea, or show and tell
+    url: https://github.com/gmhoward9289-ops/roost/discussions
+    about: Discussions are the better room for anything that is not a defect.

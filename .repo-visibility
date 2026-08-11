@@ -1,0 +1,4 @@
+# The org-wide community-health default repo. GitHub only reads these
+# defaults from a PUBLIC .github repo -- in a private one they apply to
+# nothing.
+public
